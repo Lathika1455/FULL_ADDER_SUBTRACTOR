@@ -47,7 +47,22 @@ Borrow out = A'Bin + A'B + BBin
 5. For different input combinations generate the timing diagram.
 
 **Program:**
-![Screenshot (46)](https://github.com/user-attachments/assets/7b41a1a7-b9a7-4c8d-afe5-90a49da79ce4)
+
+module exp4 (a,b,cin, sum, carry, bo, diff);
+
+input a,b,cin;
+
+output sum, carry, bo, diff;
+
+assign sum = a ^ b ^ cin; 
+
+assign carry = ((a ^ b) & cin) | (a & b); 
+
+assign diff = a ^ b ^ cin; 
+
+assign bo = ((~(a ^ b)) & cin) | (~a & b); 
+
+endmodule
 
 Developed by:Lathika Sree R RegisterNumber: 24009760
 
